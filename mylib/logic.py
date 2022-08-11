@@ -13,9 +13,9 @@ def search_wiki(name):
     return results
 
 
-# def phrase(name):
-#     """Returns phrases from wikipedia"""
+def phrase(name):
+    """Returns phrases from wikipedia"""
 
-#     page = wiki(name)
-#     blob = TextBlob(page)
-#     return blob.noun_phrases
+    # page = wiki(name)
+    # blob = TextBlob(page)
+    pass
