@@ -1,6 +1,5 @@
 install:
-	pip install -r requirements.txt 
-	python.exe -m pip install --upgrade pip
+	pip install -r requirements.txt
 freeze:
 	pip freeze > requirements.txt
 format:
