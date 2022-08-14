@@ -1,4 +1,4 @@
-from mylib.logic import wiki, search_wiki, phrase
+from mylib.logic import wiki, search_wiki
 
 
 def test_wiki():
@@ -9,5 +9,3 @@ def test_search_wiki():
     assert "Ahmed Hassan Zewail" in search_wiki("Ahmed Zewail")
 
 
-def test_phrase():
-    assert "Ahmed Hassan Zewail" in phrase("Ahmed Zewail")
