@@ -9,7 +9,9 @@ lint:
 test:
 	python -m pytest -vv --cov=mylib --cov=main test_*.py
 build:
-	#build container
+	docker build -t microservice_practice .
+run:
+	docker run -p 8080:8080 microservice_practice
 deploy:
 	#deploy 
 all: install lint test build deploy
