@@ -6,6 +6,6 @@ def test_wiki():
 
 
 def test_search_wiki():
-    assert "Ahmed Hassan Zewail" in search_wiki("Ahmed Zewail")
+    assert "Ahmed Zewail" in search_wiki("Ahmed Zewail")
 
 
