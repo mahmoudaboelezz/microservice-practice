@@ -1,10 +1,12 @@
 import wikipedia
+from textblob import TextBlob
 
 
 def wiki(name="War Goddess", length=1):
 
     my_wiki = wikipedia.summary(name, sentences=length)
     return my_wiki
+
 
 def search_wiki(name):
     """Search Wikipedia for Names"""
@@ -16,6 +18,7 @@ def search_wiki(name):
 def phrase(name):
     """Returns phrases from wikipedia"""
 
-    # page = wiki(name)
-    # blob = TextBlob(page)
-    pass
+    page = wiki(name)
+    blob = TextBlob(page)
+    phrases = blob.noun_phrases
+    return phrases
