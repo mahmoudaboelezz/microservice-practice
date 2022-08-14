@@ -13,5 +13,10 @@ build:
 run:
 	docker run -p 8080:8080 microservice_practice
 deploy:
-	#deploy 
+	#deploy
+	aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 113415630473.dkr.ecr.eu-west-2.amazonaws.com 
+	docker build -t microservice-wiki .
+	docker tag microservice-wiki:latest 113415630473.dkr.ecr.eu-west-2.amazonaws.com/microservice-wiki:latest
+	docker push 113415630473.dkr.ecr.eu-west-2.amazonaws.com/microservice-wiki:latest
+
 all: install lint test build deploy
